@@ -17,14 +17,14 @@ int main() {
     int aprobados[MATERIAS] = {0};
     int reprobados[MATERIAS] = {0};
 
-    // INGRESAR NOMBRES
-    printf("=== INGRESO DE ESTUDIANTES ===\n");
+    
+    printf("INGRESO DE ESTUDIANTES\n");
     for (i = 0; i < ESTUDIANTES; i++) {
         printf("Ingrese nombre del estudiante %d: ", i + 1);
-        scanf(" %[^\n]", nombres[i]); // permite espacios
+        scanf(" %[^\n]", nombres[i]); 
     }
 
-    // INGRESO DE NOTAS
+    
     for (i = 0; i < ESTUDIANTES; i++) {
         printf("\nEstudiante: %s\n", nombres[i]);
         for (j = 0; j < MATERIAS; j++) {
@@ -40,8 +40,8 @@ int main() {
         }
     }
 
-    // PROMEDIO POR ESTUDIANTE
-    printf("\n--- PROMEDIO POR ESTUDIANTE ---\n");
+    
+    printf("\nPROMEDIO POR ESTUDIANTE\n");
     for (i = 0; i < ESTUDIANTES; i++) {
         suma = 0;
         mayor = notas[i][0];
@@ -56,12 +56,12 @@ int main() {
 
         promEstudiante[i] = suma / MATERIAS;
 
-        printf("%s -> Promedio: %.2f | Mayor: %.2f | Menor: %.2f\n",
+        printf("%s -> Promedio: %.2f  Mayor: %.2f  Menor: %.2f\n",
                nombres[i], promEstudiante[i], mayor, menor);
     }
 
     // PROMEDIO POR MATERIA
-    printf("\n--- PROMEDIO POR MATERIA ---\n");
+    printf("\nPROMEDIO POR MATERIA\n");
     for (j = 0; j < MATERIAS; j++) {
         suma = 0;
         mayor = notas[0][j];
@@ -81,10 +81,10 @@ int main() {
 
         promMateria[j] = suma / ESTUDIANTES;
 
-        printf("Materia %d -> Promedio: %.2f | Mayor: %.2f | Menor: %.2f\n",
+        printf("Materia %d -> Promedio: %.2f  Mayor: %.2f  Menor: %.2f\n",
                j + 1, promMateria[j], mayor, menor);
 
-        printf("Aprobados: %d | Reprobados: %d\n",
+        printf("Aprobados: %d  Reprobados: %d\n",
                aprobados[j], reprobados[j]);
     }
 
