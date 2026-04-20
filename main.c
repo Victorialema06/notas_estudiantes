@@ -60,7 +60,7 @@ int main() {
                nombres[i], promEstudiante[i], mayor, menor);
     }
 
-    // PROMEDIO POR MATERIA
+    
     printf("\nPROMEDIO POR MATERIA\n");
     for (j = 0; j < MATERIAS; j++) {
         suma = 0;
